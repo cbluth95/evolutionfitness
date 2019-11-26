@@ -10,7 +10,12 @@
       </v-row>
 
       <v-list dense>
-        <v-list-item v-for="item in navItems" :key="item.text" link>
+        <v-list-item
+          v-for="item in navItems"
+          :key="item.text"
+          :to="item.path"
+          link
+        >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -98,7 +103,10 @@ export default {
   },
   data: () => ({
     drawer: null,
-    navItems: [{ icon: "home", text: "Home", path: "/" }],
+    navItems: [
+      { icon: "home", text: "Home", path: "/" },
+      { icon: "info", text: "About", path: "/about" }
+    ],
     navItems2: [{ icon: "mdi-login", text: "Sign-In/Up", path: "/signin" }]
   }),
   created() {
@@ -106,3 +114,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.v-navigation-drawer__content {
+  border-right: 2px solid rgb(146, 0, 0);
+}
+</style>
