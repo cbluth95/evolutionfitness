@@ -9,7 +9,7 @@
         </v-col>
       </v-row>
 
-      <v-list dense>
+      <v-list dense class="pt-0">
         <v-list-item
           v-for="item in navItems"
           :key="item.text"
