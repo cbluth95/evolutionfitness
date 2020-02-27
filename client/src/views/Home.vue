@@ -1,11 +1,9 @@
 <template>
   <div class="home">
     <v-container fluid class="pa-0">
-      <v-row>
-        <v-col cols="12" class="pa-0">
-          <home-slider />
-        </v-col>
-      </v-row>
+      <v-sheet height="100vh">
+        <home-slider />
+      </v-sheet>
     </v-container>
   </div>
 </template>

@@ -1,7 +1,11 @@
 <template>
-  <v-container fluid class="pt-0 pl-4 pr-4 pb-0">
+  <v-container class="pa-0 mb-0">
     <v-row>
       <v-col cols="12" class="pa-0">
+        <!-- <v-sheet>
+          <v-img width="100vw" :src="require('@/assets/images/banner.png')"></v-img>
+        </v-sheet>-->
+
         <v-carousel cycle height="94.3vh" hide-delimiter-background show-arrows-on-hover>
           <v-carousel-item v-for="(slide, i) in slides" :key="i">
             <v-sheet :color="colors[i]" height="100%">
@@ -20,13 +24,7 @@
 export default {
   data() {
     return {
-      colors: [
-        "indigo",
-        "warning",
-        "pink darken-2",
-        "red lighten-1",
-        "deep-purple accent-4"
-      ],
+      colors: ["#000", "#000", "#000", "#000", "#000", "#000"],
       slides: ["First", "Second", "Third", "Fourth", "Fifth"]
     };
   }

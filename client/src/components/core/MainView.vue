@@ -4,11 +4,9 @@
   </v-content>-->
 
   <v-content>
-    <v-container fluid class="pa-0">
-      <!-- <v-slide-y-transition mode="out-in"> -->
-      <router-view />
-      <!-- </v-slide-y-transition> -->
-    </v-container>
+    <!-- <v-slide-y-transition mode="out-in"> -->
+    <router-view />
+    <!-- </v-slide-y-transition> -->
   </v-content>
 </template>
 
