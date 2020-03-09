@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background: black;">
+  <v-app style="background: black;" class="animated fadeIn">
     <!-- Main Navigation and View for the app -->
     <main-nav />
     <main-view />
@@ -15,4 +15,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import "@/styles/index.scss";
+</style>

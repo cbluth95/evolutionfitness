@@ -10,16 +10,24 @@
       </v-row>
 
       <v-list dense class="pt-0">
-        <v-list-item v-for="item in navItems" :key="item.text" :to="item.path" link>
+        <v-list-item
+          v-for="item in navItems"
+          :key="item.text"
+          :to="item.path"
+          link
+        >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>{{ item.text }}</v-list-item-title>
+            <v-list-item-title class="navlink">{{
+              item.text
+            }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
-        <v-subheader class="mt-4 grey--text text--darken-1">Members</v-subheader>
+        <!-- <v-subheader class="mt-4 grey--text text--darken-1"
+          >Members</v-subheader -->
 
         <v-divider />
 
@@ -55,6 +63,7 @@
 </template>
 
 <script>
+import { mdiAccountGroupOutline } from "@mdi/js";
 export default {
   props: {
     source: String
@@ -63,9 +72,10 @@ export default {
     drawer: null,
     navItems: [
       { icon: "home", text: "Home", path: "/" },
-      { icon: "info", text: "About", path: "/about" }
-    ],
-    navItems2: [{ icon: "mdi-login", text: "Sign-In/Up", path: "/signin" }]
+      { icon: mdiAccountGroupOutline, text: "Members", path: "/members" }
+      // { icon: "info", text: "About", path: "/about" }
+    ]
+    // navItems2: [{ icon: "mdi-login", text: "Sign-In/Up", path: "/signin" }]
   }),
   created() {
     this.$vuetify.theme.dark = true;
@@ -74,8 +84,19 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/styles/index.scss";
 .v-navigation-drawer__content {
   border-right: 2px solid #de282f;
-  // border-left: 2px solid #de282f;
+  /* border-left: 2px solid #de282f; */
+}
+.v-application .headline,
+.v-application .title {
+  font-family: Prime Regular !important;
+  font-size: 1.5em !important;
+}
+.navlink {
+  font-family: Gota Regular !important;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
 }
 </style>

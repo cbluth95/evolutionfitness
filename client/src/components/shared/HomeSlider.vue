@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-0 mb-0">
+  <v-container fluid class="pa-0 mb-0">
     <v-row>
       <v-col cols="12" class="pa-0">
         <!-- <v-sheet>

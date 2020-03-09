@@ -1,0 +1,28 @@
+@import "./colors";
+$font-path: "/fonts" !default;
+// Custom Fonts
+@font-face {
+  font-family: "Prime Light";
+  src: url("#{$font-path}/Prime-Light.ttf");
+}
+@font-face {
+  font-family: "Prime Regular";
+  src: url("#{$font-path}/Prime-Regular.ttf");
+}
+@font-face {
+  font-family: "Gota Light";
+  src: url("#{$font-path}/Gota-Light.ttf");
+}
+@font-face {
+  font-family: "Gota Regular";
+  src: url("#{$font-path}/Gota-Regular.ttf");
+}
+// Default theme colors
+// $primary: $red-700 !default;
+// $primary-accent: $red-400 !default;
+// $secondary: $grey-500 !default;
+// $accent: $white !default;
+// $info: $orange-600 !default;
+// $success: $light-green-A400 !default;
+// $warning: $orange !default;
+// $error: $red !default;
