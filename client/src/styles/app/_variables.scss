@@ -18,11 +18,11 @@ $font-path: "/fonts" !default;
   src: url("#{$font-path}/Gota-Regular.ttf");
 }
 // Default theme colors
-// $primary: $red-700 !default;
-// $primary-accent: $red-400 !default;
-// $secondary: $grey-500 !default;
-// $accent: $white !default;
-// $info: $orange-600 !default;
-// $success: $light-green-A400 !default;
-// $warning: $orange !default;
-// $error: $red !default;
+$primary: $red-700 !default;
+$primary-accent: $red-400 !default;
+$secondary: $grey-500 !default;
+$accent: $white !default;
+$info: $orange-600 !default;
+$success: $light-green-A400 !default;
+$warning: $orange !default;
+$error: $red !default;
