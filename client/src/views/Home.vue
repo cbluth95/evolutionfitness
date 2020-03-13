@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <v-btn @click="animateText()">
+    <!-- <v-btn @click="animateText()">
       animate
-    </v-btn>
+    </v-btn> -->
     <v-container fluid class="pa-0">
       <!-- <v-sheet height="100vh">
         <home-slider />
