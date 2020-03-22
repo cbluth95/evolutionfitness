@@ -10,35 +10,32 @@
       </v-row>
 
       <v-list dense class="pt-0">
-        <v-list-item
-          v-for="item in navItems"
-          :key="item.text"
-          :to="item.path"
-          link
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title class="navlink">
-              {{ item.text }}
-            </v-list-item-title>
-          </v-list-item-content>
+        <v-list-item v-for="item in navItems" :key="item.text" :to="item.path" link>
+          <v-row>
+            <v-list-item-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content style="height: 10vh;max-height:100px;">
+              <v-list-item-title class="navlink">{{ item.text }}</v-list-item-title>
+            </v-list-item-content>
+
+            <v-col cols="12" class="pa-0 ma-0">
+              <v-divider />
+            </v-col>
+          </v-row>
         </v-list-item>
 
         <!-- <v-subheader class="mt-4 grey--text text--darken-1"
         >Members</v-subheader-->
 
-        <v-divider />
-
-        <v-list>
+        <!-- <v-list>
           <v-list-item v-for="item in navItems2" :key="item.text" link>
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
             <v-list-item-title v-text="item.text" />
           </v-list-item>
-        </v-list>
+        </v-list>-->
       </v-list>
       <v-row v-show="isMobile">
         <!-- probably a better way to set width of this component -->
@@ -97,11 +94,7 @@
             <v-icon>mdi-phone</v-icon>
           </v-btn>
 
-          <v-btn
-            class="sLinks"
-            icon
-            href="mailto:evolutionfitness307@gmail.com"
-          >
+          <v-btn class="sLinks" icon href="mailto:evolutionfitness307@gmail.com">
             <v-icon>mdi-mail</v-icon>
           </v-btn>
         </div>
@@ -175,7 +168,7 @@ export default {
 }
 .navlink {
   font-family: Prime Regular !important;
-  font-size: 1.2em !important;
+  font-size: 1em !important;
   font-weight: bold !important;
 }
 .sLinks:hover {

@@ -2,7 +2,7 @@
   <div class="home">
     <!-- <v-btn @click="animateText()">
       animate
-    </v-btn> -->
+    </v-btn>-->
     <v-container fluid class="pa-0">
       <!-- <v-sheet height="100vh">
         <home-slider />
@@ -26,17 +26,13 @@
                         width="100%"
                         max-width="100%"
                         style="filter: opacity(.6)"
-                        :src="require('../assets/images/imgfront.png')"
+                        :src="require('../assets/images/equip5.png')"
                       ></v-img>
                     </v-card>
                   </v-row>
                 </v-col>
                 <v-col cols="12" md="6" class="pa-4">
-                  <v-row
-                    style="height: 50vh;"
-                    :align="checkAlign"
-                    justify="center"
-                  >
+                  <v-row style="height: 50vh;" :align="checkAlign" justify="center">
                     <v-card
                       elevation="0"
                       color="transparent"
@@ -44,18 +40,14 @@
                       width="100%"
                       max-width="1000"
                     >
-                      <v-row
-                        style="height: 100%;"
-                        no-gutters
-                        align="center"
-                        justify="center"
-                      >
+                      <v-row style="height: 100%;" no-gutters align="center" justify="center">
                         <!-- animated typwriter text -->
                         <div
-                          class="heading text-center output animated fadeIn"
+                          class="typewriter heading text-center output animated fadeIn"
                           id="output"
                         >
-                          <h1 class="cursor"></h1>
+                          <!-- <h1 class="cursor"></h1> -->
+                          <h1>Evolution Fitness is here to serve all of your workout needs 24/7. We have a sauna and affordable pricing. Check us out at address....</h1>
                           <p></p>
                         </div>
                       </v-row>
@@ -65,11 +57,7 @@
               </v-row>
               <v-row>
                 <v-col cols="12" md="6" class="pa-4">
-                  <v-row
-                    style="height: 50vh;"
-                    align="baseline"
-                    justify="center"
-                  >
+                  <v-row style="height: 50vh;" align="baseline" justify="center">
                     <v-card
                       class="animated fadeIn"
                       elevation="0"
@@ -78,25 +66,16 @@
                       width="100%"
                       max-width="1000"
                     >
-                      <v-row
-                        style="height: 100%;"
-                        no-gutters
-                        align="center"
-                        justify="center"
-                      >
+                      <v-row style="height: 100%;" no-gutters align="center" justify="center">
                         <div class="text-center">
                           <p
                             class="pa-0 ma-0"
                             style="font-size: 10em;color:white;font-family: Prime Regular !important;"
-                          >
-                            Open
-                          </p>
+                          >Open</p>
                           <p
                             class="pa-0 ma-0"
                             style="font-size: 5em;color:red; font-family: Gota Regular !important;line-height: .4;"
-                          >
-                            24/7
-                          </p>
+                          >24/7</p>
                         </div>
                       </v-row>
                     </v-card>
@@ -116,7 +95,7 @@
                         width="100%"
                         max-width="100%"
                         style="filter: opacity(.6)"
-                        :src="require('../assets/images/sauna.png')"
+                        :src="require('../assets/images/equip6.png')"
                       ></v-img>
                     </v-card>
                   </v-row>
@@ -181,9 +160,11 @@ export default {
       return switchResult();
     }
   },
-  mounted() {
-    this.animateText("output", this.textArray);
-  },
+  // mounted() {
+  //   setTimeout(() => {
+  //     this.animateText("output", this.textArray);
+  //   }, 3000);
+  // },
   methods: {
     animateText(id, ar) {
       // values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
@@ -233,6 +214,8 @@ export default {
           }
           // If full string has been typed, switch to backspace mode.
         } else {
+          console.log("done");
+          eHeader.removeClass("cursor");
           return;
         }
       }
@@ -267,7 +250,7 @@ export default {
   }
 }
 
-/* Cursor Styling */
+/* Typewriter Cursor Styling */
 
 .cursor::after {
   content: "";

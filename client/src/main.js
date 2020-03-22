@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import "animate.css/animate.css";
+// import styles from "../src/styles/index.scss";
 
 Vue.config.productionTip = false;
 
