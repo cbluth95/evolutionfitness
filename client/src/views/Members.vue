@@ -4,11 +4,16 @@
       <div class="display-2 text-center mb-2" style="font-family: Prime Regular !important;">Gallery</div>
       <v-divider color="white" />
       <v-container>
-        <v-card color="primary">
+        <v-card color="black">
           <v-container>
             <v-row>
-              <v-col v-for="n in 6" :key="n" class="d-flex child-flex" cols="12" sm="6" md="4">
-                <v-card flat tile class="d-flex">
+              <v-col v-for="n in 7" :key="n" class="d-flex child-flex" cols="12" sm="6" md="4">
+                <v-card
+                  flat
+                  tile
+                  class="d-flex"
+                  style="border: 2px solid white; border-radius: 8px;"
+                >
                   <v-img
                     :src="require(`@/assets/images/equip${n}.png`)"
                     aspect-ratio="1"
@@ -38,7 +43,7 @@
           <v-container>
             <v-row justify="center">
               <v-col v-for="n in 1" :key="n" class="d-flex child-flex" cols="12" sm="6" md="4">
-                <v-card flat tile class="d-flex">
+                <v-card flat tile class="d-flex" style="border: 2px solid grey;">
                   <v-img
                     :src="require(`@/assets/images/givaway${n}.jpg`)"
                     aspect-ratio="1"

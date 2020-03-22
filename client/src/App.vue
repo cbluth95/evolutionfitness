@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background: black;" class="animated fadeIn">
+  <v-app style="background: #d32f2f;" class="animated fadeIn">
     <!-- Main Navigation and View for the app -->
     <main-nav />
     <main-view />
